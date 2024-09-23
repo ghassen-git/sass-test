@@ -1,0 +1,165 @@
+$utilities: (
+  color: (
+    "prefix": "color",
+    "vals": (
+      "primary": #22202e,
+      "secondary": #2a254b,
+      "white": #fff,
+      "gray": #726e8d,
+    ),
+  ),
+  stroke: (
+    "prefix": "stroke",
+    "vals": (
+      "primary": #22202e,
+      "secondary": #2a254b,
+      "white": #fff,
+      "gray": #726e8d,
+    ),
+  ),
+
+  background-color: (
+    "prefix": "bg",
+    "vals": (
+      "primary": #22202e,
+      "secondary": #2a254b,
+      "white": #fff,
+      "gray": #726e8d,
+    ),
+  ),
+  gap: (
+    "prefix": "gap",
+    "vals": (
+      "1": 2rem,
+      "2": 4.4rem,
+      "3": 10.9rem,
+    ),
+  ),
+  text-decoration: (
+    "prefix": "decoration",
+    "vals": (
+      "none": none,
+    ),
+  ),
+  display: (
+    "prefix": "display",
+    "vals": (
+      "flex": flex,
+      "none": none,
+      "block": block,
+    ),
+  ),
+  flex: (
+    "prefix": "grow",
+    "vals": (
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5,
+    ),
+  ),
+  align-items: (
+    "prefix": "align",
+    "vals": (
+      "center": center,
+      "left": flex-start,
+      "right": flex-end,
+    ),
+  ),
+  justify-content: (
+    "prefix": "justify",
+    "vals": (
+      "space": space-between,
+      "center": center,
+      "left": flex-start,
+      "right": flex-end,
+    ),
+  ),
+  font-size: (
+    "prefix": "size",
+    "vals": (
+      "1": 1.6rem,
+      "2": 1.8rem,
+      "3": 2rem,
+      "4": 2.4rem,
+    ),
+  ),
+  width: (
+    "prefix": "width",
+    "vals": (
+      "1": 20%,
+      "2": 30%,
+      "3": 40%,
+      "4": 50%,
+      "100": 100%,
+    ),
+  ),
+  padding-top: (
+    "prefix": "top",
+    "vals": (
+      "1": 1rem,
+      "2": 2rem,
+      "3": 4rem,
+      "4": 5rem,
+    ),
+  ),
+  padding-bottom: (
+    "prefix": "bottom",
+    "vals": (
+      "1": 1rem,
+      "2": 2rem,
+      "3": 4rem,
+      "4": 5rem,
+    ),
+  ),
+  padding-left: (
+    "prefix": "left",
+    "vals": (
+      "1": 1rem,
+      "2": 2rem,
+      "3": 4rem,
+      "4": 5rem,
+    ),
+  ),
+  padding-right: (
+    "prefix": "right",
+    "vals": (
+      "1": 1rem,
+      "2": 2rem,
+      "3": 4rem,
+      "4": 5rem,
+    ),
+  ),
+  padding: (
+    "prefix": "all",
+    "vals": (
+      "1": 1rem,
+      "2": 2rem,
+      "3": 4rem,
+      "4": 5rem,
+    ),
+  ),
+  font-family: (
+    "prefix": "type",
+    "vals": (
+      "1": Satoshi,
+      "2": Clash Display,
+    ),
+  ),
+  flex-direction: (
+    "prefix": "direction",
+    "vals": (
+      "row": row,
+      "column": column,
+    ),
+  ),
+);
+
+$breakpt: (
+  "s": 44rem,
+  "xs": 54em,
+  "m": 67em,
+  "l": 84em,
+  "xl": 90em,
+);

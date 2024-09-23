@@ -1,0 +1,281 @@
+@import "utilities";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+h1,
+h2 {
+  font-size: 2rem;
+  font-family: clash display;
+}
+h2 {
+  font-size: 1.8rem;
+}
+button {
+  cursor: pointer;
+}
+p,
+span,
+a {
+  font-family: satoshi;
+}
+@each $property, $y in $utilities {
+  $prefix: map-get($y, "prefix");
+  $vals: map-get($y, "vals");
+  @each $type, $value in $vals {
+    .#{$prefix}-#{$type} {
+      #{$property}: $value;
+    }
+  }
+}
+@mixin btn {
+  padding: 1.6rem 3.2rem 1.6rem 3.2rem;
+  height: 5.6rem;
+  width: 16.3rem;
+  border: none;
+}
+section {
+  button {
+    align-self: center;
+    @include btn;
+    background-color: #f9f9f9;
+  }
+}
+a {
+  font-size: 1.6rem;
+}
+@mixin s {
+  @media (max-width: map-get($breakpt,"s")) {
+    @content;
+    .nav-bar ul {
+      display: none;
+    }
+    html {
+      font-size: 48.5%;
+    }
+    .navlinks,
+    .nav-shopping,
+    .nav-search,
+    .users-nav,
+    .page-header,
+    .load,
+    .first-product {
+      display: none;
+    }
+    .display-none {
+      display: block;
+    }
+    .product-filter-container {
+      padding: 2rem 0;
+      gap: 2rem;
+      width: 100%;
+    }
+    .product-btn {
+      button {
+        width: 100%;
+      }
+    }
+    .filter {
+      width: 100%;
+    }
+    .product-btn {
+      width: 100%;
+      .Product {
+        gap: 1rem;
+        div {
+          width: 45%;
+          padding-left: 3rem;
+        }
+      }
+    }
+  }
+}
+@mixin m {
+  @media (max-width: map-get($breakpt,"m")) {
+    @content;
+    .product-btn {
+      max-width: 71rem;
+    }
+    .filter button {
+      padding: 3.9rem 11rem;
+    }
+    html {
+      font-size: 55.5%;
+    }
+    footer .footer-links {
+      padding: 3.5rem 3.3rem;
+    }
+  }
+  footer .Copyright {
+    padding: 1rem 3.3rem;
+  }
+}
+@mixin l {
+  @media (max-width: map-get($breakpt,"l")) {
+    @content;
+    .filter {
+      flex-direction: row;
+      align-self: center;
+      margin: 4.8rem;
+      ul {
+        display: none;
+      }
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .product-btn {
+      width: 96rem;
+    }
+    .product-filter-container {
+      margin: 0 auto;
+      flex-direction: column;
+      width: fit-content;
+    }
+  }
+}
+header {
+  img {
+    height: auto;
+  }
+}
+@mixin xl {
+  @media (max-width: map-get($breakpt,"xl")) {
+    @content;
+    .product-filter-container {
+      gap: 5rem;
+    }
+    .filter {
+      padding-left: 4rem;
+    }
+  }
+}
+
+@mixin xs {
+  @media (max-width: map-get($breakpt,"xs")) {
+    @content;
+    footer .footer-links {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      .link-containers-resp {
+        grid-column: 1/-1;
+        grid-row: -1;
+      }
+    }
+  }
+}
+
+@mixin ul {
+  list-style-type: none;
+}
+.nav-bar {
+  ul {
+    @include ul;
+    border-top: #726e8d solid 0.1rem;
+  }
+}
+.row {
+  flex-flow: row wrap;
+}
+.product-btn {
+  width: fit-content;
+}
+.Product {
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    img {
+      margin-bottom: 1rem;
+    }
+  }
+}
+.product-filter-container {
+  width: 100%;
+  gap: 13rem;
+  padding: 4.8rem;
+}
+.filter {
+  padding: 0 5rem 0 8rem;
+  align-self: baseline;
+  ul {
+    width: 13rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    @include ul;
+    gap: 1.2rem;
+    li:first-child {
+      margin-bottom: 1rem;
+    }
+    li {
+      font-size: 1.6rem;
+      display: flex;
+
+      input {
+        margin-right: 1rem;
+        accent-color: #4e4d93;
+      }
+    }
+  }
+}
+
+footer {
+  .Copyright {
+    padding: 2rem 8.3rem;
+    border-top: #726e8d solid 0.1rem;
+  }
+  .footer-links {
+    padding: 5.8rem 8.3rem;
+    input {
+      width: 80%;
+      height: 5.6rem;
+      background-color: #726e8d3a;
+      border: none;
+      color: #fff;
+      &::placeholder {
+        padding-left: 3rem;
+        color: #fff;
+      }
+    }
+    button {
+      width: 20%;
+      border: none;
+      height: 5.6rem;
+    }
+  }
+  a,
+  span {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.4rem;
+  }
+  svg {
+    height: 2.4rem;
+    fill: #fff;
+    width: 2.4rem;
+  }
+}
+.link-containers {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@include m {
+}
+@include l {
+}
+@include xl {
+}
+@include xs {
+}
+@include s {
+}
