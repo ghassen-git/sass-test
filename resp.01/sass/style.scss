@@ -115,8 +115,9 @@ a {
       }
     }
     .page-header-text {
-      transform: translateX(-50%, -50%);
+      transform: translateX(-50%);
       top: 35%;
+      font-size: 3rem;
     }
   }
 }
@@ -201,7 +202,8 @@ header {
     .page-header-text {
       left: 50%;
       top: 50%;
-      transform: translateX(-50%);
+
+      transform: translate(-50%, -50%);
     }
   }
 }
