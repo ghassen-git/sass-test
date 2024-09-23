@@ -10,6 +10,7 @@ html {
 
 h1,
 h2 {
+  font-weight: 400;
   font-size: 2rem;
   font-family: clash display;
 }
@@ -18,10 +19,18 @@ h2 {
   font-size: 1.8rem;
 }
 
+button {
+  cursor: pointer;
+}
+
 p,
 span,
 a {
   font-family: satoshi;
+}
+
+nav img {
+  cursor: pointer;
 }
 
 .color-primary {
@@ -272,12 +281,35 @@ a {
   font-family: Clash Display;
 }
 
+.weit-1 {
+  font-weight: 400;
+}
+
+.weit-2 {
+  font-weight: 500;
+}
+
 .direction-row {
   flex-direction: row;
 }
 
 .direction-column {
   flex-direction: column;
+}
+
+header {
+  position: relative;
+}
+
+.page-header-text {
+  font-family: Clash Display;
+  font-size: 3.6rem;
+  font-weight: 400;
+  color: #fff;
+  text-align: left;
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
 }
 
 section button {
@@ -314,10 +346,10 @@ header img {
 .Product div {
   display: flex;
   flex-direction: column;
-  gap: 1.4rem;
+  gap: 0.8rem;
 }
 .Product div img {
-  margin-bottom: 1rem;
+  margin-bottom: 1.6rem;
 }
 
 .product-filter-container {
@@ -334,9 +366,8 @@ header img {
   width: 13rem;
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1rem;
   list-style-type: none;
-  gap: 1.2rem;
 }
 .filter ul li:first-child {
   margin-bottom: 1rem;
@@ -365,10 +396,16 @@ footer .footer-links input {
   color: #fff;
 }
 footer .footer-links input::-moz-placeholder {
+  font-family: satoshi;
+  font-size: 16px;
+  font-weight: 400;
   padding-left: 3rem;
   color: #fff;
 }
 footer .footer-links input::placeholder {
+  font-family: satoshi;
+  font-size: 16px;
+  font-weight: 400;
   padding-left: 3rem;
   color: #fff;
 }
@@ -377,8 +414,12 @@ footer .footer-links button {
   border: none;
   height: 5.6rem;
 }
-footer a,
 footer span {
+  color: #fff;
+  font-size: 1.6rem;
+  font-family: clash display;
+}
+footer a {
   text-decoration: none;
   color: #fff;
   font-size: 1.4rem;
@@ -405,14 +446,11 @@ footer svg {
   html {
     font-size: 55.5%;
   }
+  footer .Copyright,
   footer .footer-links {
     padding: 3.5rem 3.3rem;
   }
 }
-footer .Copyright {
-  padding: 1rem 3.3rem;
-}
-
 @media (max-width: 84em) {
   .filter {
     flex-direction: row;
@@ -456,6 +494,14 @@ footer .Copyright {
     grid-column: 1/-1;
     grid-row: -1;
   }
+  .first-product {
+    display: none;
+  }
+  .page-header-text {
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+  }
 }
 @media (max-width: 44rem) {
   .nav-bar ul {
@@ -468,7 +514,6 @@ footer .Copyright {
   .nav-shopping,
   .nav-search,
   .users-nav,
-  .page-header,
   .load,
   .first-product {
     display: none;
@@ -486,15 +531,22 @@ footer .Copyright {
   }
   .filter {
     width: 100%;
+    gap: 1rem;
   }
   .product-btn {
     width: 100%;
   }
   .product-btn .Product {
     gap: 1rem;
+    padding-right: 0.9rem;
+    padding-left: 1rem;
   }
   .product-btn .Product div {
     width: 45%;
     padding-left: 3rem;
+  }
+  .page-header-text {
+    transform: translateX(-50%, -50%);
+    top: 35%;
   }
 }/*# sourceMappingURL=style.css.map */
