@@ -510,6 +510,12 @@ footer svg {
   html {
     font-size: 48.5%;
   }
+  .Copyright {
+    justify-content: center;
+  }
+  .social-links {
+    display: none;
+  }
   .navlinks,
   .nav-shopping,
   .nav-search,
