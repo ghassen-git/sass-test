@@ -70,7 +70,6 @@ a {
 }
 
 @media (max-width: map-get($breakpt,"s")) {
-  @content;
   .nav-bar ul {
     display: none;
   }
@@ -131,7 +130,6 @@ a {
 }
 
 @media (max-width: map-get($breakpt,"m")) {
-  @content;
   .product-btn {
     max-width: 71rem;
   }
@@ -148,7 +146,6 @@ a {
 }
 
 @media (max-width: map-get($breakpt,"l")) {
-  @content;
   .filter {
     flex-direction: row;
     align-self: center;
@@ -179,7 +176,6 @@ header {
 }
 
 @media (max-width: map-get($breakpt,"xl")) {
-  @content;
   .product-filter-container {
     gap: 5rem;
   }
@@ -189,7 +185,6 @@ header {
 }
 
 @media (max-width: map-get($breakpt,"xs")) {
-  @content;
   footer .footer-links {
     display: grid;
     gap: 2rem;

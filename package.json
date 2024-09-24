@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "build": "gulp"
+  },
   "dependencies": {
     "gulp": "^5.0.0",
     "gulp-purgecss": "^6.0.0",
